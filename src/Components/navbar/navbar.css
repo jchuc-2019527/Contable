@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: rgb(0, 0, 0);
+}
+.hola {
+  color: blanchedalmond;
+  background-color: rgb(0, 0, 0);
+}
