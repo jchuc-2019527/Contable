@@ -52,7 +52,7 @@ const Main = () => {
         <Route
           path="/tipoMovimientoLibroComprasVenta"
           element={<TipoMovimiento />}
-        />
+        /> 
       </Routes>
     </div>
   );

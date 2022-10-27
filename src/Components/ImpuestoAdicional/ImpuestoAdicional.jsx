@@ -22,13 +22,11 @@ const ImpuestoAdicional = () => {
   useEffect(() => {
     Axios.get(url + "impuesto/taxes", headers)
       .then((res) => {
-        console.log("Vienen los impuestos", res.data.result);
         setImpuestos(res.data.result);
       })
       .catch((err) => {
-        console.log("Viene el error", err);
       });
-  }, []);
+  }, [impuestos]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,17 +40,6 @@ const ImpuestoAdicional = () => {
     e.preventDefault();
     Axios.post(url + "impuesto/newImpuesto", data, headers)
       .then((res) => {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          color: "white",
-          background: "rgba(0,0,0,0.9)",
-          title: "Impuesto agregado satisfactoriamente",
-          timer: 5000,
-          backdrop: true,
-          timerProgressBar: true,
-          toast: true,
-        });
         e.target.reset();
       })
       .catch((err) => {
@@ -147,7 +134,7 @@ const ImpuestoAdicional = () => {
                           </thead>
                           {impuestos.map((newImpuesto, index) => {
                             return (
-                              <tbody>
+                              <tbody key={index} >
                                 <tr>
                                   <td className="centrado">{newImpuesto.nombreImpuesto}</td>
                                   <td className="centrado">

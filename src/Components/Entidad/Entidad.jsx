@@ -31,6 +31,7 @@ const Entidad = () => {
     e.preventDefault();
     Axios.post(url + "entidad/newEntity", entidad, headers)
       .then((res) => {
+        e.target.reset();
       })
       .catch((err) => {
          Swal.fire({
@@ -51,7 +52,6 @@ const Entidad = () => {
   useEffect(() => {
     Axios.get(url + "entidad/entities", headers)
       .then((res) => {
-        // console.log(res.data.entidades)
         setEntidades(res.data.resul);
       })
       .catch((err) => {
@@ -67,7 +67,7 @@ const Entidad = () => {
         <div className="container my-3">
           <div className="row">
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4">
-              <form>
+              <form onSubmit={registerEntidad} >
                 <h2>Entidad</h2>
                 <div className="mb-3">
                   <label className="form-label">Nit Entidad</label>
@@ -92,7 +92,7 @@ const Entidad = () => {
                   />
                 </div>
                 <div className="d-grid gap-2">
-                  <button onClick={registerEntidad} className="btn btn-success">
+                  <button className="btn btn-success">
                     Guardar
                   </button>
                 </div>
@@ -126,9 +126,9 @@ const Entidad = () => {
                           <tbody key={index} >
                             <tr >
                               <td className="centrado">
-                                {newEnti.nombreEntidad}
+                                {newEnti.NITEntidad}
                               </td>
-                              <td className="centrado">{newEnti.NITEntidad}</td>
+                              <td className="centrado">{newEnti.nombreEntidad}</td>
                             </tr>
                           </tbody>
                         );

@@ -1,10 +1,11 @@
-
-
 .inicioAdmin {
     text-align: center;
     font-family: sans-serif;
 }
 
+a{
+    color: #FFF;
+}
 
 .head {
     display: flex;
@@ -57,22 +58,14 @@
     align-items: center;
 }
 
-.navbar a:hover {
-    background: #3f3f3f;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .header {
-    height: 100vh !important;
+    height: 100vh!important;
     background: url(/src/Shared/img/header.jpg) no-repeat center;
     background-size: cover;
 }
@@ -93,17 +86,29 @@ p {
 }
 
 .btn {
-    display: inline-block;
     margin-top: 15px;
     padding: 9px 40px;
-    border: 2px solid #4898c3;
-    color: #fff;
-    text-decoration: none;
-    background: #4898c3;
+    border: 2px solid #FFF;
+    background: #fff;
+    font-size: 4rem;
 }
 
+.btn {
+    color: #FFF;
+}
+
+a:hover {
+    color: #FFF;
+}
+
+.click {
+    color: #fff;
+}
+
+
+
 .btn:hover {
-    background: none;
+    background: #fff;
 }
 
 .btn-home {
@@ -122,10 +127,6 @@ p {
     align-items: center;
 }
 
-.sau {
-    padding: 30px;
-    background: #1f1d1d
-}
 
 .box-container {
     display: flex;

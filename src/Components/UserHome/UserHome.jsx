@@ -22,9 +22,6 @@ const UserHome = () => {
               <Link to={"/perfil"}>Perfil</Link>
             </a>
           </nav>
-          <div className="logo">
-            <a>Logo</a>
-          </div>
         </div>
         <div>
           <header className="content header">
@@ -32,7 +29,7 @@ const UserHome = () => {
             <p>Seleccione la operaciòn que desee realizar</p>
           </header>
         </div>
-        <body style={{ backgroundColor: " #1D1B1B" }} className="inicioUser">
+        <body style={{ backgroundColor: "#fff" }} className="inicioUser">
           <section className="content sau">
             <div className="box-container">
               <div className="box">
