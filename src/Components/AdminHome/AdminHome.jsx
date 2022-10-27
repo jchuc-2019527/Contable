@@ -3,24 +3,24 @@ import { Link, useNavigate } from "react-router-dom";
 import "./AdminHome.css";
 
 const AdminHome = () => {
-    
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const logOut = (e) =>{
-        e.preventDefault();
-        localStorage.clear();
-        navigate('/');
-    }
+  const logOut = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    navigate("/");
+  };
 
   return (
     <div>
       <body className="inicioAdmin">
         <div className="head">
-          <div className="logo">
-          </div>
+          <div className="logo"></div>
 
           <nav className="navbar">
-            <a onClick={logOut} className="sesion" >Cerrar Sesiòn</a>
+            <a onClick={logOut} className="sesion">
+              Cerrar Sesiòn
+            </a>
           </nav>
         </div>
 

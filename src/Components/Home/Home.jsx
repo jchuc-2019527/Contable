@@ -10,7 +10,7 @@ const Home = () => {
           <div className="head">
             <nav className="navbar">
               <Link className="test" to="/login">
-                <button className="sesion" >Iniciar Sesiòn</button>
+                <a className="sesion">Iniciar Sesiòn</a>
               </Link>
             </nav>
           </div>
@@ -23,7 +23,6 @@ const Home = () => {
               izquierda de la pàgina
             </p>
           </header>
-
           <section className="content sau">
             <h2 className="title">Funciones</h2>
             <div className="box-container">

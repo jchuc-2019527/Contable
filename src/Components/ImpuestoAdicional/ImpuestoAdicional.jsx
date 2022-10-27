@@ -44,38 +44,38 @@ const ImpuestoAdicional = () => {
       .then((res) => {
         Swal.fire({
           position: "center",
-          icon:'success',
+          icon: "success",
           color: "white",
           background: "rgba(0,0,0,0.9)",
           title: "Impuesto agregado satisfactoriamente",
           timer: 5000,
           backdrop: true,
           timerProgressBar: true,
-          toast: true
+          toast: true,
         });
         e.target.reset();
       })
       .catch((err) => {
         Swal.fire({
           position: "center",
-          icon:'warning',
+          icon: "warning",
           color: "white",
           background: "rgba(0,0,0,0.9)",
           title: err.response.data.message,
           timer: 4000,
           backdrop: true,
           timerProgressBar: true,
-          toast: true
+          toast: true,
         });
       });
   };
 
   return (
-    <div style={{backgroundColor: "#5DADE2"}}>
-        <div>
-        <Navbar/>
-        </div>
-      <body style={{backgroundColor: "#5DADE2"}}>
+    <div style={{ backgroundColor: "#5DADE2" }}>
+      <div>
+        <Navbar />
+      </div>
+      <body style={{ backgroundColor: "#5DADE2" }}>
         <div className="container my-3">
           <div className="row">
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4">
@@ -145,13 +145,19 @@ const ImpuestoAdicional = () => {
                               <th className="centrado">Valor Impuesto</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <td className="centrado">IVA</td>
-                              <td className="centrado">IVA de un producto</td>
-                              <td className="centrado">4856</td>
-                            </tr>
-                          </tbody>
+                          {impuestos.map((newImpuesto, index) => {
+                            return (
+                              <tbody>
+                                <tr>
+                                  <td className="centrado">{newImpuesto.nombreImpuesto}</td>
+                                  <td className="centrado">
+                                 {newImpuesto.descripcionImpuesto}
+                                  </td>
+                                  <td className="centrado">{newImpuesto.valorImpuesto}</td>
+                                </tr>
+                              </tbody>
+                            );
+                          })}
                         </table>
                       </div>
                     </div>
